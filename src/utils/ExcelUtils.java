@@ -83,6 +83,25 @@ public class ExcelUtils {
 		}
 		return "";
 	}
+	
+	public static int getNumData(int row, int column) {
+		try {
+			XSSFRow r = sheet.getRow(row);
+			XSSFCell celija = r.getCell(column);
+			double br = celija.getNumericCellValue();
+			
+			int rez = (int)br;
+			return rez;
+		} catch (NullPointerException e) {
+			System.out.println(e.toString());
+			System.out.println("Nesto je null!");
+		} catch (Exception e) {
+			System.out.println(e.toString());
+			System.out.println("Doslo je do greske!");
+		}
+		return -1;
+	}
+
 
 
 	public static boolean setDataAt(int row, int column, String data) {

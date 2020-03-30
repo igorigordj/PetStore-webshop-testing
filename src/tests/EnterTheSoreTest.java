@@ -7,7 +7,7 @@ import pages.HomePage;
 
 
 
-public class EnterTheSoreTest extends BeforeAfterClass
+public class EnterTheSoreTest extends TestTemplateClass
 {
 	
 	

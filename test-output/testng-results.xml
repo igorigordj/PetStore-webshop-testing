@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17437" started-at="2020-03-25T22:19:49 CET" finished-at="2020-03-25T22:20:06 CET">
+  <suite name="Default suite" duration-ms="28330" started-at="2020-03-30T19:22:04 CEST" finished-at="2020-03-30T19:22:33 CEST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17437" started-at="2020-03-25T22:19:49 CET" finished-at="2020-03-25T22:20:06 CET">
-      <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuTest@2758fe70]" name="setup" is-config="true" duration-ms="4349" started-at="2020-03-25T22:19:49 CET" finished-at="2020-03-25T22:19:53 CET">
+    <test name="Default test" duration-ms="28330" started-at="2020-03-30T19:22:04 CEST" finished-at="2020-03-30T19:22:33 CEST">
+      <class name="tests.RegistrationTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.RegistrationTest@49fc609f]" name="setup" is-config="true" duration-ms="4684" started-at="2020-03-30T19:22:04 CEST" finished-at="2020-03-30T19:22:09 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signInTest()[pri:0, instance:tests.PetStoreMenuTest@2758fe70]" name="signInTest" duration-ms="2726" started-at="2020-03-25T22:19:53 CET" finished-at="2020-03-25T22:19:56 CET">
+        <test-method status="PASS" signature="registrationTest()[pri:0, instance:tests.RegistrationTest@49fc609f]" name="registrationTest" duration-ms="23555" started-at="2020-03-30T19:22:09 CEST" finished-at="2020-03-30T19:22:33 CEST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="urlStatusTestAndMenuTest()[pri:0, instance:tests.PetStoreMenuTest@2758fe70]" name="urlStatusTestAndMenuTest" duration-ms="10147" started-at="2020-03-25T22:19:56 CET" finished-at="2020-03-25T22:20:06 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- urlStatusTestAndMenuTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@2758fe70]" name="afterClass" is-config="true" duration-ms="158" started-at="2020-03-25T22:20:06 CET" finished-at="2020-03-25T22:20:06 CET">
+        </test-method> <!-- registrationTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationTest@49fc609f]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-03-30T19:22:33 CEST" finished-at="2020-03-30T19:22:33 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.PetStoreMenuTest -->
+      </class> <!-- tests.RegistrationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

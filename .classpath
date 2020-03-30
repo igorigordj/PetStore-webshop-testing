@@ -31,5 +31,12 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/igi/Desktop/itbootpredavanja/lib folder/poi-scratchpad-4.1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/igi/Desktop/itbootpredavanja/lib folder/SparseBitSet-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/igi/Desktop/itbootpredavanja/lib folder/xmlbeans-3.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/byte-buddy-1.8.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/client-combined-3.141.59-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/client-combined-3.141.59.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/commons-exec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/guava-25.0-jre.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/okhttp-3.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/ApachePOIdomaci/lib/okio-1.14.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
