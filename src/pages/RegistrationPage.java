@@ -226,7 +226,7 @@ public class RegistrationPage {
 		ExcelUtils.setExcell(dataSource);
 		ExcelUtils.setWorkSheet(1);
 
-		for (int i = 1; i < 5; i++) { // ExcelUtils.getRowNumber()
+		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) { 
 
 			driver.navigate().to(this.locators.getProperty("registrationPage"));
 
