@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 31 18:50:41 CEST 2020</td>
+<td>Started on:</td><td>Tue Mar 31 21:29:34 CEST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>97 seconds (97488 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45366 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.RegistrationTest.registrationTestWithOnlyUserNameAndPassword()'><b>registrationTestWithOnlyUserNameAndPassword</b><br>Test class: tests.RegistrationTest</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	did not expect to find [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at tests.RegistrationTest.registrationTestWithOnlyUserNameAndPassword(RegistrationTest.java:57)
+<td title='tests.SignInTest.invalidSignInTest()'><b>invalidSignInTest</b><br>Test class: tests.SignInTest</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pages.SignInPage.invalidSignIn(SignInPage.java:82)
+	at tests.SignInTest.invalidSignInTest(SignInTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,12 +110,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1600154294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1600154294'><pre>java.lang.AssertionError: The following asserts failed:
-	did not expect to find [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at tests.RegistrationTest.registrationTestWithOnlyUserNameAndPassword(RegistrationTest.java:57)
+</pre></div><a href='#' onClick='toggleBox("stack-trace951031848", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace951031848'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pages.SignInPage.invalidSignIn(SignInPage.java:82)
+	at tests.SignInTest.invalidSignInTest(SignInTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -144,8 +146,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>92</td>
-<td>tests.RegistrationTest@3b084709</td></tr>
+<td>3</td>
+<td>tests.SignInTest@49fc609f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.SignInTest.signInTest()'><b>signInTest</b><br>Test class: tests.SignInTest</td>
+<td></td>
+<td>36</td>
+<td>tests.SignInTest@49fc609f</td></tr>
 </table><p>
 </body>
 </html>

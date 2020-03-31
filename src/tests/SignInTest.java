@@ -1,35 +1,37 @@
 package tests;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 
-
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+
+import pages.SignInPage;
 
 
 public class SignInTest extends TestTemplateClass 
 {
 
-//	@BeforeClass
-//	public void readTheTable() throws IOException
-//	{
-//
-//		
-//	}
+
 	
 	@Test
-	public void signInTest() throws IOException
+	//sign in with valid userName and password
+	public void signInTest() 
 	{
-		
+		this.driver.navigate().to(this.locators.getProperty("signInPage"));
 	
+	
+		SignInPage sip = new SignInPage(driver, selectors, locators, waiter);
+		
+		sip.signIn();
+	}
+	
+	@Test
+	//sign in without userName or password
+		public void invalidSignInTest() 
+	{
+		this.driver.navigate().to(this.locators.getProperty("signInPage"));
+		
+		SignInPage sip = new SignInPage(driver, selectors, locators, waiter);
+		
+		sip.invalidSignIn();
 	}
 
 }

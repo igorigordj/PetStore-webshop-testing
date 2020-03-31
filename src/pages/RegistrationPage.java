@@ -11,20 +11,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.ExcelUtils;
 
-public class RegistrationPage {
+public class RegistrationPage extends AttributesClass{
 
-	private WebDriver driver;
-	private Properties selectors;
-	private Properties locators;
-	private WebDriverWait waiter;
 	private final String dataSource = "tables/pet-store-data.xlsx";
-
+	
 	public RegistrationPage(WebDriver driver, Properties selectors, Properties locators, WebDriverWait waiter) {
-		this.driver = driver;
-		this.selectors = selectors;
-		this.locators = locators;
-		this.waiter = waiter;
+		super(driver, selectors, locators, waiter);
+		
 	}
+
+	
+
+	
 
 	//userId
 	public WebElement getUserId() {

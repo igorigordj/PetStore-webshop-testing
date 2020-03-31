@@ -17,7 +17,7 @@ public class EnterTheSoreTest extends TestTemplateClass
 	{
 		this.driver.navigate().to(this.locators.getProperty("url"));
 		
-		HomePage homePage = new HomePage(driver, selectors);
+		HomePage homePage = new HomePage(driver, selectors, locators, waiter);
 		homePage.enterTheStore();
 	}
 	
