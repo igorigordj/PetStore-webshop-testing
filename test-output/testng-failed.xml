@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.RegistrationTest">
         <methods>
-          <include name="registrationTest"/>
           <include name="setup"/>
           <include name="afterClass"/>
+          <include name="registrationTestWithOnlyUserNameAndPassword"/>
         </methods>
       </class> <!-- tests.RegistrationTest -->
     </classes>
