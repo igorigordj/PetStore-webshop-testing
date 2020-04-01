@@ -40,7 +40,7 @@ public abstract class TestTemplateClass
 	@AfterClass
 	public void afterClass() 
 	{
-		this.driver.close();
+		//this.driver.close();
 	}
 
 }
