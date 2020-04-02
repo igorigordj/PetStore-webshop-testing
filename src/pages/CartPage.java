@@ -36,7 +36,7 @@ public class CartPage extends AttributesClass{
 			
 			String excelItem = ExcelUtils.getDataAt(i, 1);
 			this.driver.navigate().to(excelItem);
-			sip.addToCart();
+			sip.addItemToCart();
 			
 		}
 	}

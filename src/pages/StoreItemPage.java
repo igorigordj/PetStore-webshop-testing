@@ -18,7 +18,7 @@ public class StoreItemPage extends AttributesClass{
 		return this.driver.findElement(By.xpath(this.selectors.getProperty("addToCart")));
 	}
 	
-	public void addToCart() {
+	public void addItemToCart() {
 		this.getAddToCartBtn().click();
 	}
 
