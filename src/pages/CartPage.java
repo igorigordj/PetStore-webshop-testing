@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -7,11 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utils.ExcelUtils;
 
 public class CartPage extends AttributesClass{
 	
-	private final String dataSource = "tables/pet-store-data.xlsx";
+	
 
 	public CartPage(WebDriver driver, Properties selectors, Properties locators, WebDriverWait waiter) {
 		super(driver, selectors, locators, waiter);
@@ -19,25 +19,38 @@ public class CartPage extends AttributesClass{
 	}
 	
 	public WebElement getCart() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("cartBtn")));
+		return this.driver.findElement(By.xpath(this.selectors.getProperty("cartBtn")));
 	}
 	
 	public void openCart() {
 		this.getCart().click();
 	}
 
-	public void addToCart() {
-		ExcelUtils.setExcell(dataSource);
-		ExcelUtils.setWorkSheet(0);
-		
-		StoreItemPage sip = new StoreItemPage(driver, selectors, locators, waiter);
-		
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
-			
-			String excelItem = ExcelUtils.getDataAt(i, 1);
-			this.driver.navigate().to(excelItem);
-			sip.addItemToCart();
-			
-		}
+	//gets items list from the cart
+	public List<WebElement> getItems() {
+		return this.driver.findElements(By.xpath(this.selectors.getProperty("items")));
 	}
+	
+	//checks if item is added to the cart
+	public boolean isItemInCart(String itemId) {
+		boolean isInCart = false;
+		 List <WebElement> items = this.getItems();
+			for (int i = 0; i < items.size(); i++) {
+				if(this.getItems().get(i).getText().contains(itemId)){
+					isInCart = true;
+				}
+			}
+		return isInCart;
+	}
+	
+	//checks if cart is empty
+	public boolean isCartEmpty() {
+		boolean isEmpty = false;
+		List <WebElement> items = this.getItems();
+		if(items.isEmpty()) {
+			isEmpty = true;
+		}
+		return isEmpty;
+	}
+	
 }
