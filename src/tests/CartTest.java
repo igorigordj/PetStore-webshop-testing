@@ -1,7 +1,4 @@
 package tests;
-
-
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -50,9 +47,16 @@ public class CartTest extends TestTemplateClass {
 
 		CartPage cp = new CartPage(driver, selectors, locators, waiter);
 			
+		//open the cart
 		cp.openCart();
+		
+		//delete all cookies
 		this.driver.manage().deleteAllCookies();
+		
+		//refresh the cart
 		this.driver.navigate().refresh();
+		
+		//check if cart is empty
 		sa.assertTrue(cp.isCartEmpty());
 		
 	}
