@@ -9,20 +9,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utils.ExcelUtils;
 
 public class RegistrationPage extends AttributesClass{
 
-	private final String dataSource = "tables/pet-store-data.xlsx";
 	
 	public RegistrationPage(WebDriver driver, Properties selectors, Properties locators, WebDriverWait waiter) {
 		super(driver, selectors, locators, waiter);
 		
 	}
 
-	
-
-	
 
 	//userId
 	public WebElement getUserId() {
@@ -222,115 +217,6 @@ public class RegistrationPage extends AttributesClass{
 		return this.driver.findElement(By.xpath(this.selectors.getProperty("mainImg")));
 	}
 
-	
-	// Regular registration test (Expected: successful registration)
-	public void completeRegistrationForm() {
-
-		ExcelUtils.setExcell(dataSource);
-		ExcelUtils.setWorkSheet(1);
-
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) { 
-
-			driver.navigate().to(this.locators.getProperty("registrationPage"));
-
-			String userId = ExcelUtils.getDataAt(i, 2) + i*3;
-			this.setUserId(userId);
-			ExcelUtils.setDataAt(i, 0, userId);
-
-			String password = ExcelUtils.getDataAt(i, 1);
-			this.setPassword(password);
-
-			this.setPasswordRp(ExcelUtils.getDataAt(i, 1));
-			this.setFirstName(ExcelUtils.getDataAt(i, 2));
-			this.setLastName(ExcelUtils.getDataAt(i, 3));
-			this.setEmail(ExcelUtils.getDataAt(i, 4));
-			this.setPhone(ExcelUtils.getDataAt(i, 5));
-			this.setAddress(ExcelUtils.getDataAt(i, 6));
-			this.setAddress2(ExcelUtils.getDataAt(i, 7));
-			this.setCity(ExcelUtils.getDataAt(i, 8));
-			this.setState(ExcelUtils.getDataAt(i, 9));
-			this.setZip(ExcelUtils.getNumData(i, 10));
-			this.setCountry(ExcelUtils.getDataAt(i, 11));
-			this.selectLanguage(ExcelUtils.getDataAt(i, 11));
-			this.selectCategory();
-			this.setEnableList();
-			this.setEnableBaner();
-
-			this.setSaveAccount();
-
-		}
-	}
-	
-	// Registration test without User name(Expected: registration fail)
-	public void completeRegistrationFormWithoutUserName() {
-
-		ExcelUtils.setExcell(dataSource);
-		ExcelUtils.setWorkSheet(1);
-
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) { 
-
-			driver.navigate().to(this.locators.getProperty("registrationPage"));
-
-			this.getUserId().clear();
-			
-			String password = ExcelUtils.getDataAt(i, 1);
-			this.setPassword(password);
-
-			this.setPasswordRp(ExcelUtils.getDataAt(i, 1));
-			this.setFirstName(ExcelUtils.getDataAt(i, 2));
-			this.setLastName(ExcelUtils.getDataAt(i, 3));
-			this.setEmail(ExcelUtils.getDataAt(i, 4));
-			this.setPhone(ExcelUtils.getDataAt(i, 5));
-			this.setAddress(ExcelUtils.getDataAt(i, 6));
-			this.setAddress2(ExcelUtils.getDataAt(i, 7));
-			this.setCity(ExcelUtils.getDataAt(i, 8));
-			this.setState(ExcelUtils.getDataAt(i, 9));
-			this.setZip(ExcelUtils.getNumData(i, 10));
-			this.setCountry(ExcelUtils.getDataAt(i, 11));
-			this.selectLanguage(ExcelUtils.getDataAt(i, 11));
-			this.selectCategory();
-			this.setEnableList();
-			this.setEnableBaner();
-
-			this.setSaveAccount();
-
-		}
-	}
-	
-	// Registration test only with User name and password, without aditional data(Expected: registration fail)
-		public void completeRegistrationFormWithoutData() {
-
-			ExcelUtils.setExcell(dataSource);
-			ExcelUtils.setWorkSheet(1);
-
-			for (int i = 1; i < ExcelUtils.getRowNumber(); i++) { 
-
-				driver.navigate().to(this.locators.getProperty("registrationPage"));
-
-				String userId = ExcelUtils.getDataAt(i, 2) + i*2;
-				this.setUserId(userId);
-				ExcelUtils.setDataAt(i, 0, userId);
-				
-				String password = ExcelUtils.getDataAt(i, 1);
-				this.setPassword(password);
-
-				this.setPasswordRp(ExcelUtils.getDataAt(i, 1));
-		
-				this.getFirstName().clear();
-				this.getLastName().clear();
-				this.getEmail().clear();
-				this.getPhone().clear();
-				this.getAddress().clear();
-				this.getAddress2().clear();
-				this.getCity().clear();
-				this.getState().clear();
-				this.getZip().clear();
-				this.getCountry().clear();
-
-				this.setSaveAccount();
-
-			}
-		}
 		
 		//validate registration
 		public boolean validateRegistration() {

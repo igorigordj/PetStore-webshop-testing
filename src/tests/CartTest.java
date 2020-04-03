@@ -42,24 +42,24 @@ public class CartTest extends TestTemplateClass {
 		sa.assertAll();
 	}
 
-	@Test
-	public void clearCookiestest() {
-
-		CartPage cp = new CartPage(driver, selectors, locators, waiter);
-			
-		//open the cart
-		cp.openCart();
-		
-		//delete all cookies
-		this.driver.manage().deleteAllCookies();
-		
-		//refresh the cart
-		this.driver.navigate().refresh();
-		
-		//check if cart is empty
-		sa.assertTrue(cp.isCartEmpty());
-		
-	}
+//	@Test
+//	public void clearCookiestest() {
+//
+//		CartPage cp = new CartPage(driver, selectors, locators, waiter);
+//			
+//		//open the cart
+//		cp.openCart();
+//		
+//		//delete all cookies
+//		this.driver.manage().deleteAllCookies();
+//		
+//		//refresh the cart
+//		this.driver.navigate().refresh();
+//		
+//		//check if cart is empty
+//		sa.assertTrue(cp.isCartEmpty());
+//		
+//	}
 	
 
 }

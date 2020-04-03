@@ -31,6 +31,7 @@ public class CartPage extends AttributesClass{
 		return this.driver.findElements(By.xpath(this.selectors.getProperty("items")));
 	}
 	
+	
 	//checks if item is added to the cart
 	public boolean isItemInCart(String itemId) {
 		boolean isInCart = false;
