@@ -150,3 +150,4 @@
 [0402/232745.535:ERROR:crashpad.cc(145)] Failed to get activation factory for IPlatformDiagnosticsAndUsageDataSettingsStatics
 [0402/233107.543:ERROR:crashpad.cc(145)] Failed to get activation factory for IPlatformDiagnosticsAndUsageDataSettingsStatics
 [0403/192142.479:ERROR:crashpad.cc(145)] Failed to get activation factory for IPlatformDiagnosticsAndUsageDataSettingsStatics
+[0403/200515.168:ERROR:crashpad.cc(145)] Failed to get activation factory for IPlatformDiagnosticsAndUsageDataSettingsStatics
