@@ -13,7 +13,7 @@ public class CartTest extends TestTemplateClass {
 	SoftAssert sa = new SoftAssert();
 	
 	
-	@Test
+	@Test(priority = 1)
 	public void cartTest() throws InterruptedException {
 		
 		ExcelUtils.setExcell(dataSource);
@@ -41,8 +41,22 @@ public class CartTest extends TestTemplateClass {
 	
 		sa.assertAll();
 	}
+	
+	@Test(priority = 2)
+	public void cartSumTotalTest() {
+		
+		CartPage cp = new CartPage(driver, selectors, locators, waiter);
+		
+		//open the cart
+		cp.openCart();
+		
+		String sum = cp.sumOfAllPrices();
+		
+		sa.assertTrue(cp.getTotal().getText().contains(sum));
+		
+	}
 
-	@Test
+	@Test(priority = 3)
 	public void clearCookiestest() {
 
 		CartPage cp = new CartPage(driver, selectors, locators, waiter);

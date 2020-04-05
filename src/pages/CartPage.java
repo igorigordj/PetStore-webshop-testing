@@ -31,6 +31,33 @@ public class CartPage extends AttributesClass{
 		return this.driver.findElements(By.xpath(this.selectors.getProperty("items")));
 	}
 	
+	//gets total cart value
+	public WebElement getTotal() {
+		return this.driver.findElement(By.xpath(this.selectors.getProperty("total")));
+	}
+	
+	
+	//sum all prices
+	public String sumOfAllPrices() {
+		List<WebElement> prices = this.getItems();
+		double sum = 0;
+		String sumString = "";
+		for (int i = 1; i < prices.size()-1; i++) {
+			WebElement priceElement = prices.get(i).findElement(By.xpath(this.selectors.getProperty("price")));
+			String priceString = priceElement.getText();
+			String justPrice = "";
+			
+			char[] numbers = priceString.toCharArray();
+			for (int j = 1; j < numbers.length; j++) {
+				justPrice += numbers[j];
+			}
+			double price = Double.parseDouble(justPrice);
+	
+			sum += price;
+		}
+		sumString += sum;
+		return sumString;
+	}
 	
 	//checks if item is added to the cart
 	public boolean isItemInCart(String itemId) {
