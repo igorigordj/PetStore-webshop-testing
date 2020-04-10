@@ -57,10 +57,30 @@ public class CartTest extends TestTemplateClass {
 	}
 
 	@Test(priority = 3)
-	public void clearCookiestest() {
+	public void clearCookiesTest() {
 
 		CartPage cp = new CartPage(driver, selectors, locators, waiter);
 			
+		//add items to cart
+		ExcelUtils.setExcell(dataSource);
+		ExcelUtils.setWorkSheet(0);
+
+		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+
+			StoreItemPage sip = new StoreItemPage(driver, selectors, locators, waiter);
+			
+			//gets item ID from table
+			String itemId = ExcelUtils.getDataAt(i, 0);
+			
+			//gets item link from table
+			String excelItem = ExcelUtils.getDataAt(i, 1);
+			
+			//click on item in excel table
+			this.driver.navigate().to(excelItem);
+			
+			sip.addItemToCart();
+		
+		}
 		//open the cart
 		cp.openCart();
 		
